@@ -59,7 +59,7 @@
       {
         "name": "committer",
         "description": "Committer of the project",
-        "users": ["frank-zsy", "heming6666", "LiuChangFreeman"],
+        "users": ["frank-zsy", "heming6666", "LiuChangFreeman", "zhuxiangning"],
         "commands": ["/difficulty", "/rerun", "/complete-checklist", "/start-vote"]
       },
       {
@@ -71,7 +71,7 @@
       {
         "name": "approver",
         "description": "After approvers' approve, pulls should be merged automatically",
-        "users": ["frank-zsy", "heming6666", "LiuChangFreeman"],
+        "users": ["frank-zsy", "heming6666", "LiuChangFreeman", "zhuxiangning"],
         "commands": ["/approve"]
       },
       {
