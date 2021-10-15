@@ -8,7 +8,7 @@
     "analyze": "cross-env ANALYZE=1 umi build",
     "build": "umi build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "ui": "umi ui",
     "docker-hub:build": "docker build  -f Dockerfile.hub -t  ant-design-pro ./",
     "docker-prod:build": "docker-compose -f ./docker/docker-compose.yml build",
