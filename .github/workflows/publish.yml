@@ -1,4 +1,4 @@
-name: website
+name: Publish to Github Pages
 
 on:
   push:
@@ -10,19 +10,15 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
       - uses: actions/checkout@v2
-
-      - name: Setup 🔨
       - uses: actions/setup-node@v2
         with:
           node-version: '15'
+      - name: Build 🔨
 
-      - name: Build 📦
         run: |
           npm install
           npm run build
-
       - name: Deploy 🚀
         uses: crazy-max/ghaction-github-pages@v2
         with:
