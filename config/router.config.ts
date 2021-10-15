@@ -22,8 +22,7 @@ export default [
         path: "/",
         component: "../layouts/HomeLayout",
         routes: [
-            { path: '/', redirect: '/home' },
-            { path: "/home", component: "./home/index" },
+            { path: "/", component: "./home/index" },
             { component: '404' }
         ]
     },

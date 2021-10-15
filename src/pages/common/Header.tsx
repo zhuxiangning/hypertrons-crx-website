@@ -6,19 +6,24 @@ const { Header } = Layout;
 // const { SubMenu } = Menu;
 class HeaderView extends React.Component {
     state = {
-        current: 'mail',
+        current: 'home',
     };
-    private path: string | undefined;
+    // private path: string | undefined;
 
     handleMenuClick = (event: any) => {
         console.log('click ', event);
         this.setState({
             current: event.key,
         });
-        this.path = "";
-        for (let i = event.keyPath.length-1; i >= 0; --i)
-            this.path += `/${event.keyPath[i]}`;
-        router.push(this.path);
+        // this.path = "";
+        // for (let i = event.keyPath.length-1; i >= 0; --i)
+        //     this.path += `/${event.keyPath[i]}`;
+        // router.push(this.path);
+       if (event.key === "home") {
+         router.push("");
+       } else {
+         window.open("https://github.com/hypertrons/hypertrons-crx");
+       }
     };
 
     render() {
@@ -34,7 +39,10 @@ class HeaderView extends React.Component {
                   <Menu.Item key="home" >
                       <Icon type="home" />Hypercrx Home
                   </Menu.Item>
-                  <a href={"https://github.com/hypertrons/hypertrons-crx"}>GitHub repo</a>
+                  <Menu.Item key="github" >
+                    <Icon type="github" />GitHub Repo
+                  </Menu.Item>
+                  {/*<a href={"https://github.com/hypertrons/hypertrons-crx"}>GitHub repo</a>*/}
                   {/*<SubMenu*/}
                   {/*  key="program"*/}
                   {/*  title={*/}
