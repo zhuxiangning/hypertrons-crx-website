@@ -17,7 +17,7 @@ jobs:
       - name: Build 🔨
 
         run: |
-          npm install --legacy-peer-deps
+          yarn install
           npm run build
       - name: Deploy 🚀
         uses: crazy-max/ghaction-github-pages@v2
